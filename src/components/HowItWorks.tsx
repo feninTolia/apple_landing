@@ -15,12 +15,16 @@ const HowItWorks = () => {
       ease: 'power2.inOut',
     });
 
-    animateWithGSAP('.g_fadeIn', {
-      opacity: 1,
-      y: 0,
-      duration: 1,
-      ease: 'power2.inOut',
-    });
+    animateWithGSAP(
+      '.g_fadeIn',
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: 'power2.inOut',
+      },
+      { start: '0% bottom' }
+    );
   }, []);
 
   return (
