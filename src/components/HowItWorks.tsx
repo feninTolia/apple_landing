@@ -52,11 +52,12 @@ const HowItWorks = () => {
 
             <div className="hiw-video">
               <video
-                className=" pointer-events-none"
+                className="pointer-events-none"
                 preload="none"
                 muted
                 playsInline
                 autoPlay
+                loop
                 ref={videoRef}
               >
                 <source src={frameVideo} type="video/mp4" />

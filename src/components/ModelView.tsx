@@ -20,7 +20,7 @@ interface IProps {
   index: number;
   groupRef: MutableRefObject<Group>;
   gsapType: 'view1' | 'view2';
-  controlRef: React.LegacyRef<OrbitControls>;
+  controlRef: React.MutableRefObject<null>;
   setRotationState: Dispatch<React.SetStateAction<number>>;
   item: IModel;
   size: string;
@@ -53,6 +53,7 @@ const ModelView = ({
         enablePan={false}
         rotateSpeed={0.4}
         target={new Vector3(0, 0, 0)}
+        // @ts-expect-error !!!
         onEnd={() => setRotationState(controlRef?.current?.getAzimuthalAngle())}
       />
 
